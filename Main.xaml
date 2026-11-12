@@ -1,0 +1,1090 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p3="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umamm="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Models;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umm="clr-namespace:UiPath.MicrosoftOffice365.Models;assembly=UiPath.MicrosoftOffice365" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.DU.Shared.Utils</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities.Utils</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Models</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Mail.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Filters</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Models</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Shared.Services.Graph.Mail.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Mail.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Api</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Linq.AsyncEnumerable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="918,17403.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="variable5" />
+      <Variable x:TypeArguments="x:String" Name="variable4" />
+      <Variable x:TypeArguments="x:String" Name="variable3" />
+      <Variable x:TypeArguments="x:Int32" Name="int_total_score" />
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="MailList" />
+      <Variable x:TypeArguments="p7:DocumentTaxonomy" Name="MyTaxonomy" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="cvDataTable" />
+      <Variable x:TypeArguments="p6:ExtractionResult" Name="ExtractionResults" />
+      <Variable x:TypeArguments="sd:DataSet" Name="extractedDataSet" />
+      <Variable x:TypeArguments="x:Int32" Name="MatchedJobID" />
+      <Variable x:TypeArguments="x:String" Name="SavedFilePath" />
+      <Variable x:TypeArguments="x:String" Name="str_JobKeywords" />
+      <Variable x:TypeArguments="scg:List(umm:Office365Message)" Name="O365MailList" />
+      <Variable x:TypeArguments="s:String[]" Name="LocalFiles" />
+      <Variable x:TypeArguments="x:String" Name="currentFilePath" />
+      <Variable x:TypeArguments="x:String" Name="str_EmailSubject" />
+      <Variable x:TypeArguments="x:String" Name="CurrentCVPath" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_JobResult" />
+      <Variable x:TypeArguments="x:String" Name="DocText" />
+      <Variable x:TypeArguments="p4:Document" Name="DOM" />
+      <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConn" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dict_FileSubjects" />
+      <Variable x:TypeArguments="s:String[]" Name="filesBefore" />
+      <Variable x:TypeArguments="x:String" Name="str_JobExpKeywords" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="860.8,122.4" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The download and Screening Process has started&quot;]" />
+    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="860.8,137.6" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[MyTaxonomy]" />
+    <umam:GetEmailListConnections BrowserFolder="{x:Null}" BrowserFolderId="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" FreeTextFilter="{x:Null}" Mailbox="{x:Reference __ReferenceID1}" MailboxBackup="{x:Reference __ReferenceID2}" QueryFilter="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" ConnectionId="f3d5f32e-493c-441c-b0b1-e0d8e6e6aefd" DisplayName="Get Email List" EmailList="[O365MailList]" FilterSelectionMode="ConditionBuilder" sap:VirtualizedContainerService.HintSize="860.8,283.2" sap2010:WorkflowViewState.IdRef="GetEmailListConnections_1" Importance="Any" IncludeSubfolders="False" ManualEntryFolder="Inbox" MarkAsRead="True" MaxResults="100" OrderByDate="NewestFirst" SelectionMode="EnterPath" UnreadOnly="True" UseConnectionService="True" UseSharedMailbox="False" WithAttachmentsOnly="True">
+      <umam:GetEmailListConnections.FilterSelectionBackup>
+        <usau:BackupSlot x:TypeArguments="umame:FilterMode" StoredValue="ConditionBuilder">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umame:FilterMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umam:GetEmailListConnections.FilterSelectionBackup>
+      <umam:GetEmailListConnections.MailFolderArgument>
+        <umamm:MailFolderArgument BrowserFolder="{x:Null}" BrowserFolderId="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" ManualEntryFolder="Inbox" SelectionMode="EnterPath">
+          <umamm:MailFolderArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" x:Name="__ReferenceID0" StoredValue="EnterPath">
+              <usau:BackupSlot.BackupValues>
+                <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="2">
+                  <x:Null />
+                  <x:Null />
+                </scg:List>
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </umamm:MailFolderArgument.Backup>
+        </umamm:MailFolderArgument>
+      </umam:GetEmailListConnections.MailFolderArgument>
+      <umam:GetEmailListConnections.MailboxArg>
+        <umamm:MailboxArgument UseSharedMailbox="False">
+          <umamm:MailboxArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID2" StoredValue="NoMailbox">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </umamm:MailboxArgument.Backup>
+          <umamm:MailboxArgument.SharedMailbox>
+            <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID1" />
+          </umamm:MailboxArgument.SharedMailbox>
+        </umamm:MailboxArgument>
+      </umam:GetEmailListConnections.MailboxArg>
+    </umam:GetEmailListConnections>
+    <Assign sap:VirtualizedContainerService.HintSize="860.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_43">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[dict_FileSubjects]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[New Dictionary(Of String, String)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <If Condition="[O365MailList IsNot Nothing AndAlso O365MailList.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="860.8,2804" sap2010:WorkflowViewState.IdRef="If_6">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="753.6,2544" sap2010:WorkflowViewState.IdRef="Sequence_23">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ForEach x:TypeArguments="umm:Office365Message" CurrentIndex="{x:Null}" DisplayName="For Each currentOffice365Message" sap:VirtualizedContainerService.HintSize="720,2484" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[O365MailList]">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="umm:Office365Message">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="umm:Office365Message" Name="currentOffice365Message" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="718.4,2362.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="s:String[]" Name="filesnew" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="684.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[currentOffice365Message.Subject]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="684.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_44">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="s:String[]">[filesBefore]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("CV_Folder")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <umam:DownloadEmailAttachments ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" FilterByFileNames="{x:Null}" NewResult="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" ConflictResolution="[UiPath.MicrosoftOffice365.Enums.ConflictBehavior.Rename]" ConnectionId="f3d5f32e-493c-441c-b0b1-e0d8e6e6aefd" DestinationPath="CV_Folder" DisplayName="Download Email Attachments" Email="[currentOffice365Message]" ExcludeInlineAttachments="False" sap:VirtualizedContainerService.HintSize="684.8,236.8" sap2010:WorkflowViewState.IdRef="DownloadEmailAttachments_1" SearchMode="UseSimple" UseConnectionService="True" />
+                  <Assign sap:VirtualizedContainerService.HintSize="684.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_45">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="s:String[]">[filesnew]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("CV_Folder").Except(filesBefore).ToArray()]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each newFilePath" sap:VirtualizedContainerService.HintSize="684.8,356" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[filesnew]">
+                    <ui:ForEach.Body>
+                      <ActivityAction x:TypeArguments="x:String">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:String" Name="newFilePath" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_46">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[dict_FileSubjects(newFilePath)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[currentOffice365Message.Subject]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEach.Body>
+                  </ui:ForEach>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="684.8,1186.4" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="649.6,1084.8" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If Condition="[currentOffice365Message.Attachments.Any()]" sap:VirtualizedContainerService.HintSize="616,1024.8" sap2010:WorkflowViewState.IdRef="If_4">
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484.8,773.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="safeSubject" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[safeSubject]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[String.Join("_", currentOffice365Message.Subject.Split(Path.GetInvalidFileNameChars()))]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <ui:ForEach x:TypeArguments="snm:Attachment" CurrentIndex="{x:Null}" DisplayName="For Each currentAttachment" sap:VirtualizedContainerService.HintSize="451.2,539.2" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[currentOffice365Message.Attachments]">
+                                <ui:ForEach.Body>
+                                  <ActivityAction x:TypeArguments="snm:Attachment">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="snm:Attachment" Name="currentAttachment" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,417.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Processing attachment: &quot; + CurrentAttachment.Name]" />
+                                      <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[&quot;CV_Folder\&quot; + safeSubject + &quot;__&quot; + CurrentAttachment.Name]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="416,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_2" Path="[&quot;CV_Folder\&quot; + currentAttachment.Name]" />
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEach.Body>
+                              </ui:ForEach>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484.8,89.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+          </ui:ForEach>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="753.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <Assign sap:VirtualizedContainerService.HintSize="860.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_23">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[LocalFiles]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("CV_Folder")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="860.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Files found in CV_Folder: &quot; + LocalFiles.Count.ToString]" />
+    <If Condition="[LocalFiles.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="860.8,13509.6" sap2010:WorkflowViewState.IdRef="If_15">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="859.2,13258.4" sap2010:WorkflowViewState.IdRef="Sequence_44">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentFilePath" sap:VirtualizedContainerService.HintSize="825.6,13198.4" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[LocalFiles]">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="x:String">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:String" Name="currentFilePath" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="824,13076.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="790.4,13016.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch.Try>
+                      <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="788.8,12569.6" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="variable6" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:DatabaseConnect DisplayName="Connect to Database" sap:VirtualizedContainerService.HintSize="755.2,92" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Driver={MySQL ODBC 9.7 Unicode Driver};Server=YOUR_SERVER;Port=YOUR_PORT;Database=YOUR_DATABASE;User=YOUR_USER;Password=YOUR_PASSWORD;" DatabaseConnection="[dbConn]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="755.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_24">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[currentCVPath]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[currentFilePath]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="755.2,336" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="649.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="616,165.6" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[str_EmailSubject]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[Path.GetFileNameWithoutExtension(currentFilePath).ToLower().Replace("_", " ")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                        </ui:CommentOut>
+                        <If Condition="[dict_FileSubjects.ContainsKey(currentFilePath)]" sap:VirtualizedContainerService.HintSize="755.2,621.6" sap2010:WorkflowViewState.IdRef="If_28">
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_47">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[str_EmailSubject]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[dict_FileSubjects(currentFilePath)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_48">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[str_EmailSubject]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[Path.GetFileNameWithoutExtension(currentFilePath).ToLower().Replace("_", " ")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <If Condition="[String.IsNullOrWhiteSpace(str_EmailSubject)]" sap:VirtualizedContainerService.HintSize="755.2,485.6" sap2010:WorkflowViewState.IdRef="If_27">
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Warn" Message="[&quot;Could not match job title from filename: &quot; + Path.GetFileName(currentFilePath)]" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="755.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;The subject line being sent to the database is: &quot; + str_EmailSubject]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="755.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_41">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[MatchedJobID]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="755.2,174.4" sap2010:WorkflowViewState.IdRef="Assign_42">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[str_JobKeywords]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[""]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <If Condition="[Not String.IsNullOrWhiteSpace(str_EmailSubject)]" sap:VirtualizedContainerService.HintSize="755.2,10106.4" sap2010:WorkflowViewState.IdRef="If_26">
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="753.6,9846.4" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_JobResult]" DisplayName="Run Query" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="720,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="SELECT job_id, job_title, education_keywords, experience_keywords FROM jobs;">
+                                <ui:ExecuteQuery.Parameters>
+                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                </ui:ExecuteQuery.Parameters>
+                              </ui:ExecuteQuery>
+                              <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Reset matching outputs&#xA;io_MatchedJobID = 0&#xA;io_JobKeywords = &quot;&quot;&#xA;&#xA;If String.IsNullOrWhiteSpace(in_subject) Then Exit Sub&#xA;&#xA;Dim subjectLower As String = in_subject.ToLower().Trim()&#xA;Dim bestScore As Integer = 0&#xA;&#xA;For Each row As System.Data.DataRow In in_jobs.Rows&#xA;    If row(&quot;job_title&quot;) Is DBNull.Value OrElse String.IsNullOrWhiteSpace(row(&quot;job_title&quot;).ToString()) Then &#xA;        Continue For &#xA;    End If&#xA;&#xA;    Dim jobTitle As String = row(&quot;job_title&quot;).ToString().ToLower().Trim()&#xA;    Dim score As Integer = 0&#xA;&#xA;    ' 1. Exact or partial substring match (e.g. &quot;physiotherapist&quot;, &quot;accountant&quot;, &quot;doctor&quot;)&#xA;    If subjectLower.Contains(jobTitle) OrElse jobTitle.Contains(subjectLower) Then&#xA;        score += 100&#xA;    End If&#xA;&#xA;    ' 2. Word-by-word matching for multi-word titles (e.g. &quot;business analyst&quot;)&#xA;    Dim jobWords = jobTitle.Split(&quot; &quot;c).Where(Function(w) w.Trim().Length &gt; 2).ToList()&#xA;    For Each word In jobWords&#xA;        If subjectLower.Contains(word) Then&#xA;            score += 15&#xA;        End If&#xA;    Next&#xA;&#xA;    ' Track highest scoring job match&#xA;    If score &gt; bestScore Then&#xA;        bestScore = score&#xA;        io_MatchedJobID = Convert.ToInt32(row(&quot;job_id&quot;))&#xA;        &#xA;        ' Fix: Proper ternary syntax and DBNull check&#xA;        If IsDBNull(row(&quot;education_keywords&quot;)) OrElse String.IsNullOrWhiteSpace(row(&quot;education_keywords&quot;).ToString()) Then&#xA;            io_JobKeywords = &quot;&quot;&#xA;        Else&#xA;            io_JobKeywords = row(&quot;education_keywords&quot;).ToString()&#xA;        End If&#xA;    End If&#xA;Next" DisplayName="Find Matching Job" sap:VirtualizedContainerService.HintSize="720,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+                                <ui:InvokeCode.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_subject">[str_EmailSubject]</InArgument>
+                                  <InArgument x:TypeArguments="sd:DataTable" x:Key="in_jobs">[dt_JobResult]</InArgument>
+                                  <InOutArgument x:TypeArguments="x:Int32" x:Key="io_MatchedJobID">[MatchedJobID]</InOutArgument>
+                                  <InOutArgument x:TypeArguments="x:String" x:Key="io_JobKeywords">[str_JobKeywords]</InOutArgument>
+                                </ui:InvokeCode.Arguments>
+                              </ui:InvokeCode>
+                              <Assign sap:VirtualizedContainerService.HintSize="720,174.4" sap2010:WorkflowViewState.IdRef="Assign_49">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[str_JobExpKeywords]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[String.Join("", dt_JobResult.Select("job_id = " &amp; MatchedJobID.ToString).Select(Function(r) r("experience_keywords").ToString()))]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <If Condition="[MatchedJobID &gt; 0]" sap:VirtualizedContainerService.HintSize="720,9268" sap2010:WorkflowViewState.IdRef="If_16">
+                                <If.Then>
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="718.4,8880.8" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="684.8,336" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="649.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="616,165.6" sap2010:WorkflowViewState.IdRef="Assign_26">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Int32">[MatchedJobID]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(dt_JobResult.Rows(0)("job_id"))]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="684.8,336" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="649.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="616,165.6" sap2010:WorkflowViewState.IdRef="Assign_27">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[str_JobKeywords]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[dt_JobResult.Rows(0)("education_keywords").ToString()]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
+                                    <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[DOM]" DocumentPath="[CurrentCVPath]" DocumentText="[DocText]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="684.8,398.4" sap2010:WorkflowViewState.IdRef="DigitizeDocument_3">
+                                      <p:DigitizeDocument.OCREngine>
+                                        <ActivityFunc x:TypeArguments="sd1:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))" Argument2="{x:Reference __ReferenceID3}">
+                                          <ActivityFunc.Argument1>
+                                            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+                                          </ActivityFunc.Argument1>
+                                          <p1:UiPathDocumentOCR Endpoint="{x:Null}" ImageFile="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="/yfPuA4oGp7J0baep3jtYRc2pUB1PbuTAlhO/9/8BxdzlrRk2NLOAU+UTyzmzvVEX0GDucTTIosE4pOG9jZdiw==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,91.2" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_3" Image="[Image]" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="100000" UseSeparateOcrProcess="True">
+                                            <p1:UiPathDocumentOCR.PredictionId>
+                                              <InArgument x:TypeArguments="x:String">
+                                                <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_30">
+                                                  <DelegateInArgument x:TypeArguments="x:String" x:Name="__ReferenceID3" Name="PredictionId" />
+                                                </DelegateArgumentValue>
+                                              </InArgument>
+                                            </p1:UiPathDocumentOCR.PredictionId>
+                                            <p1:UiPathDocumentOCR.Source>
+                                              <p1:OcrImageInput ImageFile="{x:Null}" Image="[Image]" />
+                                            </p1:UiPathDocumentOCR.Source>
+                                          </p1:UiPathDocumentOCR>
+                                        </ActivityFunc>
+                                      </p:DigitizeDocument.OCREngine>
+                                    </p:DigitizeDocument>
+                                    <p2:DataExtractionScope AvailableAssetPaths="{x:Array Type=x:String}" ClassificationResult="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyGenerativeValidation="False" DisplayName="Data Extraction Scope" DocumentObjectModel="[DOM]" DocumentPath="[CurrentCVPath]" DocumentText="[DocText]" DocumentTypeId="HumanResources.Recruitment.CV" ExtractionResult="[ExtractionResults]" FormatValuesIfPossible="True" GenerativeValidationConfidenceThreshold="1" sap:VirtualizedContainerService.HintSize="684.8,434.4" sap2010:WorkflowViewState.IdRef="DataExtractionScope_3" Taxonomy="[MyTaxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIad85a6a467b349a591d8db9ae7002998&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;HumanResources.Recruitment.CV&quot;:{&quot;FieldMappings&quot;:{&quot;HumanResources.Recruitment.CV.email&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;HumanResources.Recruitment.CV.email&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;HumanResources.Recruitment.CV.phone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;HumanResources.Recruitment.CV.phone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;HumanResources.Recruitment.CV.education&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;HumanResources.Recruitment.CV.education&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;HumanResources.Recruitment.CV.skills&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;HumanResources.Recruitment.CV.skills&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;HumanResources.Recruitment.CV.experience&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;HumanResources.Recruitment.CV.experience&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UIad85a6a467b349a591d8db9ae7002998&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UIad85a6a467b349a591d8db9ae7002998&quot;:[]}}">
+                                      <p2:DataExtractionScope.Extractors>
+                                        <p3:GenerativeExtractor AvailableAssetPaths="{x:Array Type=x:String}" ReferenceDocumentId="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" DisplayName="Generative Extractor" GenerativeModelsForDocumentType="{}{&quot;HumanResources.Recruitment.CV&quot;:{&quot;Id&quot;:&quot;generative_extractor&quot;,&quot;Name&quot;:&quot;Long Document Simple Layout Extractor&quot;,&quot;DocumentTypeId&quot;:&quot;&quot;,&quot;Status&quot;:7,&quot;DetailsUrl&quot;:&quot;https://cloud.uipath.com:443/ad286ce4-b75b-4486-a85d-a0b48264588e/5821ab30-7da2-497b-aa51-1f1e2b3da18b/du_/api/framework/projects/00000000-0000-0000-0000-000000000001/extractors/generative_extractor?api-version=2.0&quot;,&quot;SyncUrl&quot;:&quot;https://cloud.uipath.com:443/ad286ce4-b75b-4486-a85d-a0b48264588e/5821ab30-7da2-497b-aa51-1f1e2b3da18b/du_/api/framework/projects/00000000-0000-0000-0000-000000000001/extractors/generative_extractor/extraction?api-version=2.0&quot;,&quot;AsyncUrl&quot;:&quot;https://cloud.uipath.com:443/ad286ce4-b75b-4486-a85d-a0b48264588e/5821ab30-7da2-497b-aa51-1f1e2b3da18b/du_/api/framework/projects/00000000-0000-0000-0000-000000000001/extractors/generative_extractor/extraction/start?api-version=2.0&quot;,&quot;ProjectVersion&quot;:null,&quot;ProjectVersionName&quot;:null,&quot;ResourceType&quot;:&quot;Generative&quot;,&quot;Description&quot;:null}}" sap:VirtualizedContainerService.HintSize="382.4,76" sap2010:WorkflowViewState.IdRef="GenerativeExtractor_3" PersistenceId="UIad85a6a467b349a591d8db9ae7002998" Prompt="{}{&quot;HumanResources.Recruitment.CV.email&quot;:&quot;\&quot;Extract the email of the applicant\&quot;&quot;,&quot;HumanResources.Recruitment.CV.phone&quot;:&quot;\&quot;Extract the phone number or mobile number of the applicant\&quot;&quot;,&quot;HumanResources.Recruitment.CV.education&quot;:&quot;\&quot;The single highest qualification the candidate has completed or is currently studying towards, e.g. \&quot;BCom Accounting\&quot; or \&quot;National Diploma in Marketing\&quot;. Highest-to-lowest order: PhD, Master's, Honours, Bachelor's degree, Diploma, Certificate, Matric. Return only the qualification name. Do not include the institution, dates, marks, or any other qualification. Maximum 100 characters.\&quot;&quot;,&quot;HumanResources.Recruitment.CV.skills&quot;:&quot;\&quot;List all technical skills, programming languages, and tools mentioned\&quot;&quot;,&quot;HumanResources.Recruitment.CV.experience&quot;:&quot;\&quot;List every role the applicant has held\&quot;&quot;}" RetryOnFailure="True" Timeout="3600000">
+                                          <p3:GenerativeExtractor.DocumentBounds>
+                                            <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
+                                              <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
+                                                <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
+                                              </DelegateArgumentValue>
+                                            </InArgument>
+                                          </p3:GenerativeExtractor.DocumentBounds>
+                                          <p3:GenerativeExtractor.DocumentObjectModel>
+                                            <InArgument x:TypeArguments="p4:Document">
+                                              <DelegateArgumentValue x:TypeArguments="p4:Document">
+                                                <DelegateInArgument x:TypeArguments="p4:Document" Name="DocumentObjectModel" />
+                                              </DelegateArgumentValue>
+                                            </InArgument>
+                                          </p3:GenerativeExtractor.DocumentObjectModel>
+                                          <p3:GenerativeExtractor.DocumentPath>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                                              </DelegateArgumentValue>
+                                            </InArgument>
+                                          </p3:GenerativeExtractor.DocumentPath>
+                                          <p3:GenerativeExtractor.DocumentText>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                                <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                                              </DelegateArgumentValue>
+                                            </InArgument>
+                                          </p3:GenerativeExtractor.DocumentText>
+                                          <p3:GenerativeExtractor.ExtractorDocumentType>
+                                            <InArgument x:TypeArguments="p5:ExtractorDocumentType">
+                                              <DelegateArgumentValue x:TypeArguments="p5:ExtractorDocumentType">
+                                                <DelegateInArgument x:TypeArguments="p5:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                                              </DelegateArgumentValue>
+                                            </InArgument>
+                                          </p3:GenerativeExtractor.ExtractorDocumentType>
+                                          <p3:GenerativeExtractor.ExtractorResult>
+                                            <OutArgument x:TypeArguments="p5:ExtractorResult">
+                                              <DelegateArgumentReference x:TypeArguments="p5:ExtractorResult">
+                                                <DelegateOutArgument x:TypeArguments="p5:ExtractorResult" Name="ExtractorResult" />
+                                              </DelegateArgumentReference>
+                                            </OutArgument>
+                                          </p3:GenerativeExtractor.ExtractorResult>
+                                          <p3:GenerativeExtractor.OriginalDocumentObjectModel>
+                                            <InArgument x:TypeArguments="p4:Document">
+                                              <DelegateArgumentValue x:TypeArguments="p4:Document">
+                                                <DelegateInArgument x:TypeArguments="p4:Document" Name="OriginalDocumentObjectModel" />
+                                              </DelegateArgumentValue>
+                                            </InArgument>
+                                          </p3:GenerativeExtractor.OriginalDocumentObjectModel>
+                                          <p3:GenerativeExtractor.OriginalDocumentPath>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                                <DelegateInArgument x:TypeArguments="x:String" Name="OriginalDocumentPath" />
+                                              </DelegateArgumentValue>
+                                            </InArgument>
+                                          </p3:GenerativeExtractor.OriginalDocumentPath>
+                                          <p3:GenerativeExtractor.OriginalDocumentText>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                                <DelegateInArgument x:TypeArguments="x:String" Name="OriginalDocumentText" />
+                                              </DelegateArgumentValue>
+                                            </InArgument>
+                                          </p3:GenerativeExtractor.OriginalDocumentText>
+                                          <p3:GenerativeExtractor.PredictionId>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <DelegateArgumentValue x:TypeArguments="x:String">
+                                                <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                                              </DelegateArgumentValue>
+                                            </InArgument>
+                                          </p3:GenerativeExtractor.PredictionId>
+                                        </p3:GenerativeExtractor>
+                                      </p2:DataExtractionScope.Extractors>
+                                    </p2:DataExtractionScope>
+                                    <p2:ExportExtractionResults DataSet="[extractedDataSet]" DisplayName="Export Extraction Results" ExtractionResult="[ExtractionResults]" sap:VirtualizedContainerService.HintSize="684.8,208.8" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_3" IncludeConfidence="False" IncludeOCRConfidence="False" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="684.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="sd:DataTable">[cvDataTable]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="sd:DataTable">[extractedDataSet.Tables(0)]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[cvDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="684.8,6932.8" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                      <ui:ForEachRow.Body>
+                                        <ActivityAction x:TypeArguments="sd:DataRow">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="590.4,6760" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If Condition="[cvDataTable.Rows.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="556.8,6700" sap2010:WorkflowViewState.IdRef="If_17">
+                                              <If.Then>
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="555.2,6448.8" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="x:String" Name="variable2" />
+                                                    <Variable x:TypeArguments="x:Int32" Name="int_NewApplicantID" />
+                                                  </Sequence.Variables>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;ROW CHECK -&gt; email=&quot; + CurrentRow(&quot;email&quot;).ToString + &quot; phone=&quot; + CurrentRow(&quot;phone&quot;).ToString + &quot; education=&quot; + CurrentRow(&quot;education&quot;).ToString + &quot; skills=&quot; + CurrentRow(&quot;skills&quot;).ToString +&quot; experience=&quot; + CurrentRow(&quot;experience&quot;).ToString]" />
+                                                  <Assign sap:VirtualizedContainerService.HintSize="521.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_29">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Int32">[int_total_score]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <If Condition="[Not String.IsNullOrWhiteSpace(CurrentRow(&quot;education&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="521.6,6040" sap2010:WorkflowViewState.IdRef="If_18">
+                                                    <If.Then>
+                                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="520,5788.8" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                                        <Sequence.Variables>
+                                                          <Variable x:TypeArguments="x:String" Name="str_ApplicationStatus" />
+                                                          <Variable x:TypeArguments="x:Double" Name="dbl_ScorePercent" />
+                                                          <Variable x:TypeArguments="x:Int32" Name="int_MaxPossibleScore" />
+                                                          <Variable x:TypeArguments="x:String" Name="variable8" />
+                                                          <Variable x:TypeArguments="x:String" Name="variable7" />
+                                                          <Variable x:TypeArguments="x:String" Name="variable1" />
+                                                          <Variable x:TypeArguments="sd:DataTable" Name="dt_NewId" />
+                                                          <Variable x:TypeArguments="sd:DataTable" Name="dt_ExistingApplicant" />
+                                                          <Variable x:TypeArguments="sd:DataTable" Name="dt_ExistingApplication" />
+                                                          <Variable x:TypeArguments="sd:DataTable" Name="dt_ApplicantSkillIds" />
+                                                          <Variable x:TypeArguments="sd:DataTable" Name="dt_JobSkillIds" />
+                                                          <Variable x:TypeArguments="sd:DataTable" Name="dt_AllSkills" />
+                                                        </Sequence.Variables>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <Assign sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Int32">[int_total_score]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                        <If Condition="[Not String.IsNullOrWhiteSpace(CurrentRow(&quot;education&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="486.4,836" sap2010:WorkflowViewState.IdRef="If_25">
+                                                          <If.Then>
+                                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,248" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim edu As String = If(in_education, &quot;&quot;).ToLower()&#xA;&#xA;If edu.Contains(&quot;phd&quot;) OrElse edu.Contains(&quot;doctor&quot;) Then&#xA;    io_total_score += 50&#xA;ElseIf edu.Contains(&quot;msc&quot;) OrElse edu.Contains(&quot;master&quot;) Then&#xA;    io_total_score += 40&#xA;ElseIf edu.Contains(&quot;honours&quot;) OrElse edu.Contains(&quot;hons&quot;) Then&#xA;    io_total_score += 30&#xA;ElseIf edu.Contains(&quot;bsc&quot;) OrElse edu.Contains(&quot;bachelor&quot;) OrElse edu.Contains(&quot;degree&quot;) Then&#xA;    io_total_score += 20&#xA;ElseIf edu.Contains(&quot;diploma&quot;) OrElse edu.Contains(&quot;certificate&quot;) Then&#xA;    io_total_score += 10&#xA;ElseIf edu.Contains(&quot;matric&quot;) OrElse edu.Contains(&quot;grade 12&quot;) Then&#xA;    io_total_score += 5&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                                                                <ui:InvokeCode.Arguments>
+                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_education">[CurrentRow("education").ToString]</InArgument>
+                                                                  <InOutArgument x:TypeArguments="x:Int32" x:Key="io_total_score">[int_total_score]</InOutArgument>
+                                                                </ui:InvokeCode.Arguments>
+                                                              </ui:InvokeCode>
+                                                            </Sequence>
+                                                          </If.Then>
+                                                          <If.Else>
+                                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,417.6" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Warn" Message="[&quot;No education text could be extracted from &quot; + currentFilePath + &quot; - moving to Processed_CVs without scoring&quot;]" />
+                                                              <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="Processed_CVs" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="416,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_7" Path="[currentFilePath]" />
+                                                            </Sequence>
+                                                          </If.Else>
+                                                        </If>
+                                                        <Assign sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_53">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Int32">[int_total_score]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Int32">[int_total_score + (str_JobExpKeywords.Split(","c).Select(Function(k) k.Trim().ToLower()).Where(Function(k) k &lt;&gt; "" AndAlso CurrentRow("experience").ToString.ToLower().Contains(k)).Distinct().Count() * 10)]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                        <Assign DisplayName="Assign Add Education Keyword" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_54">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Int32">[int_total_score]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Int32">[int_total_score + (str_JobKeywords.Split(","c).Select(Function(k) k.Trim().ToLower()).Where(Function(k) k &lt;&gt; "" AndAlso CurrentRow("education").ToString.ToLower().Contains(k)).Distinct().Count() * 10)]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_ExistingApplicant]" DisplayName="Run Query" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="486.4,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_5" Sql="SELECT applicant_id FROM applicants WHERE email = ?">
+                                                          <ui:ExecuteQuery.Parameters>
+                                                            <InArgument x:TypeArguments="x:String" x:Key="email">[CurrentRow("email").ToString]</InArgument>
+                                                          </ui:ExecuteQuery.Parameters>
+                                                        </ui:ExecuteQuery>
+                                                        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="486.4,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_10" Sql="INSERT Into applicants (email, phone, education, skills) VALUES (?, ?, ?, ?)&#xA;On DUPLICATE KEY UPDATE applicant_id = LAST_INSERT_ID(applicant_id);">
+                                                          <ui:ExecuteNonQuery.Parameters>
+                                                            <InArgument x:TypeArguments="x:String" x:Key="email">[CurrentRow("email").ToString]</InArgument>
+                                                            <InArgument x:TypeArguments="x:String" x:Key="phone">[CurrentRow("phone").ToString]</InArgument>
+                                                            <InArgument x:TypeArguments="x:String" x:Key="education">[CurrentRow("education").ToString]</InArgument>
+                                                            <InArgument x:TypeArguments="x:String" x:Key="skills">[String.Join(", ", CurrentRow("skills").ToString.Split(","c).Select(Function(s) s.Trim()).Take(5))]</InArgument>
+                                                            <InArgument x:TypeArguments="x:Int32" x:Key="jobID">[MatchedJobID]</InArgument>
+                                                          </ui:ExecuteNonQuery.Parameters>
+                                                        </ui:ExecuteNonQuery>
+                                                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_NewId]" DisplayName="Run Query" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="486.4,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_7" Sql="SELECT LAST_INSERT_ID() AS new_id">
+                                                          <ui:ExecuteQuery.Parameters>
+                                                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                                          </ui:ExecuteQuery.Parameters>
+                                                        </ui:ExecuteQuery>
+                                                        <Assign sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_35">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Int32">[int_NewApplicantID]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(dt_NewId.Rows(0)("new_id"))]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_AllSkills]" DisplayName="Run Query" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="486.4,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_16" Sql="SELECT s.skill_id, s.skill_name FROM job_skills js JOIN skills s ON s.skill_id = js.skill_id WHERE js.job_id = ?">
+                                                          <ui:ExecuteQuery.Parameters>
+                                                            <InArgument x:TypeArguments="x:Int32" x:Key="key job_ID">[MatchedJobID]</InArgument>
+                                                          </ui:ExecuteQuery.Parameters>
+                                                        </ui:ExecuteQuery>
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;AllSkills count: &quot; + dt_AllSkills.Rows.Count.ToString]" />
+                                                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each str_CurrentSkill" sap:VirtualizedContainerService.HintSize="486.4,1011.2" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[CurrentRow(&quot;skills&quot;).ToString.Split(&quot;,&quot;c).Select(Function(s) s.Trim()).Where(Function(s) s &lt;&gt; &quot;&quot;).Distinct().ToArray()]">
+                                                          <ui:ForEach.Body>
+                                                            <ActivityAction x:TypeArguments="x:String">
+                                                              <ActivityAction.Argument>
+                                                                <DelegateInArgument x:TypeArguments="x:String" Name="str_CurrentSkill" />
+                                                              </ActivityAction.Argument>
+                                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,880.8" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                                                                <Sequence.Variables>
+                                                                  <Variable x:TypeArguments="sd:DataTable" Name="dt_ExistingSkill" />
+                                                                  <Variable x:TypeArguments="x:Int32" Name="int_SkillID" />
+                                                                </Sequence.Variables>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_MatchedSkillID = 0 &#xA;Dim cvSkill As String = in_currentSkill.ToLower().Trim() &#xA;&#xA;For Each row As System.Data.DataRow In in_allSkills.Rows &#xA;    ' Strip bracketed detail e.g. &quot;(TENS)&quot; so word matching isn't thrown off&#xA;    Dim adminSkill As String = row(&quot;skill_name&quot;).ToString().ToLower() &#xA;    adminSkill = System.Text.RegularExpressions.Regex.Replace(adminSkill, &quot;\(.*?\)&quot;, &quot;&quot;).Trim() &#xA;    &#xA;    Dim adminWords As List(Of String) = adminSkill.Split(New Char() {&quot; &quot;c, &quot;&amp;&quot;c}, StringSplitOptions.RemoveEmptyEntries).Where(Function(w) w.Trim().Length &gt; 3).ToList() &#xA;    &#xA;    For Each word As String In adminWords &#xA;        If cvSkill.Contains(word) OrElse word.Contains(cvSkill) Then &#xA;            io_MatchedSkillID = Convert.ToInt32(row(&quot;skill_id&quot;)) &#xA;            Exit For &#xA;        End If &#xA;    Next &#xA;    &#xA;    If io_MatchedSkillID &gt; 0 Then &#xA;        Exit For &#xA;    End If &#xA;Next" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="451.2,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_4">
+                                                                  <ui:InvokeCode.Arguments>
+                                                                    <InArgument x:TypeArguments="x:String" x:Key="in_currentSkill">[str_CurrentSkill]</InArgument>
+                                                                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_allSkills">[dt_AllSkills]</InArgument>
+                                                                    <InOutArgument x:TypeArguments="x:Int32" x:Key="io_MatchedSkillID">[int_SkillID]</InOutArgument>
+                                                                  </ui:InvokeCode.Arguments>
+                                                                </ui:InvokeCode>
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;CV skill: [&quot; + str_CurrentSkill + &quot;] matched skill_id: &quot; + int_SkillID.ToString]" />
+                                                                <If Condition="[int_SkillID &gt; 0]" sap:VirtualizedContainerService.HintSize="451.2,449.6" sap2010:WorkflowViewState.IdRef="If_30">
+                                                                  <If.Then>
+                                                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,198.4" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                      <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="416,138.4" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_13" Sql="INSERT IGNORE INTO applicant_skills (applicant_id, skill_id) VALUES (?, ?)">
+                                                                        <ui:ExecuteNonQuery.Parameters>
+                                                                          <InArgument x:TypeArguments="x:Int32" x:Key="applicant_ID">[int_NewApplicantID]</InArgument>
+                                                                          <InArgument x:TypeArguments="x:Int32" x:Key="skill_ID">[int_SkillID]</InArgument>
+                                                                        </ui:ExecuteNonQuery.Parameters>
+                                                                      </ui:ExecuteNonQuery>
+                                                                    </Sequence>
+                                                                  </If.Then>
+                                                                  <If.Else>
+                                                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                    </Sequence>
+                                                                  </If.Else>
+                                                                </If>
+                                                              </Sequence>
+                                                            </ActivityAction>
+                                                          </ui:ForEach.Body>
+                                                        </ui:ForEach>
+                                                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_ApplicantSkillIds]" DisplayName="Run Query" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="486.4,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_14" Sql="SELECT skill_id FROM applicant_skills WHERE applicant_id = ?">
+                                                          <ui:ExecuteQuery.Parameters>
+                                                            <InArgument x:TypeArguments="x:Int32" x:Key="applicant_ID">[int_NewApplicantID]</InArgument>
+                                                          </ui:ExecuteQuery.Parameters>
+                                                        </ui:ExecuteQuery>
+                                                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_JobSkillIds]" DisplayName="Run Query" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="486.4,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_15" Sql="SELECT skill_id FROM job_skills WHERE job_id = ?">
+                                                          <ui:ExecuteQuery.Parameters>
+                                                            <InArgument x:TypeArguments="x:Int32" x:Key="job_ID">[MatchedJobID]</InArgument>
+                                                          </ui:ExecuteQuery.Parameters>
+                                                        </ui:ExecuteQuery>
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info" Message="[&quot;Applicant skills: &quot; + dt_ApplicantSkillIds.Rows.Count.ToString + &quot; | Job required skills: &quot; + dt_JobSkillIds.Rows.Count.ToString]" />
+                                                        <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim applicantIds As New List(Of Integer)&#xA;For Each r As System.Data.DataRow In in_applicantSkills.Rows&#xA;    applicantIds.Add(Convert.ToInt32(r(&quot;skill_id&quot;)))&#xA;Next&#xA;&#xA;Dim jobIds As New List(Of Integer)&#xA;For Each r As System.Data.DataRow In in_jobSkills.Rows&#xA;    jobIds.Add(Convert.ToInt32(r(&quot;skill_id&quot;)))&#xA;Next&#xA;&#xA;Dim matchedCount As Integer = applicantIds.Intersect(jobIds).Count()&#xA;io_total_score += matchedCount * 10" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="486.4,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+                                                          <ui:InvokeCode.Arguments>
+                                                            <InArgument x:TypeArguments="sd:DataTable" x:Key="in_applicantSkills">[dt_ApplicantSkillIds]</InArgument>
+                                                            <InArgument x:TypeArguments="sd:DataTable" x:Key="in_jobSkills">[dt_JobSkillIds]</InArgument>
+                                                            <InOutArgument x:TypeArguments="x:Int32" x:Key="io_total_score">[int_total_score]</InOutArgument>
+                                                          </ui:InvokeCode.Arguments>
+                                                        </ui:InvokeCode>
+                                                        <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Query" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="486.4,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_11" Sql="INSERT Into education (applicant_id, qualification)&#xA;VALUES (?, ?)">
+                                                          <ui:ExecuteQuery.Parameters>
+                                                            <InArgument x:TypeArguments="x:Int32" x:Key="applicant_id">[int_NewApplicantID]</InArgument>
+                                                            <InArgument x:TypeArguments="x:String" x:Key="qualification">[CurrentRow("education").ToString]</InArgument>
+                                                          </ui:ExecuteQuery.Parameters>
+                                                        </ui:ExecuteQuery>
+                                                        <ui:ExecuteQuery ContinueOnError="{x:Null}" DataTable="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Query" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="486.4,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_17" Sql="INSERT INTO experience (applicant_id, roles) VALUES (?, ?)">
+                                                          <ui:ExecuteQuery.Parameters>
+                                                            <InArgument x:TypeArguments="x:Int32" x:Key="applicant_id">[int_NewApplicantID]</InArgument>
+                                                            <InArgument x:TypeArguments="x:String" x:Key="roles">[CurrentRow("experience").ToString]</InArgument>
+                                                          </ui:ExecuteQuery.Parameters>
+                                                        </ui:ExecuteQuery>
+                                                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_ExistingApplication]" DisplayName="Run Query" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="486.4,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_10" Sql="SELECT COUNT(*) AS app_count FROM applications WHERE applicant_id = ? AND job_id = ?">
+                                                          <ui:ExecuteQuery.Parameters>
+                                                            <InArgument x:TypeArguments="x:Int32" x:Key="applicant_id">[int_NewApplicantID]</InArgument>
+                                                            <InArgument x:TypeArguments="x:Int32" x:Key="job_id">[MatchedJobID]</InArgument>
+                                                          </ui:ExecuteQuery.Parameters>
+                                                        </ui:ExecuteQuery>
+                                                        <If Condition="[Convert.ToInt32(dt_ExistingApplication.Rows(0)(&quot;app_count&quot;)) &gt; 0]" sap:VirtualizedContainerService.HintSize="486.4,1175.2" sap2010:WorkflowViewState.IdRef="If_22">
+                                                          <If.Then>
+                                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,417.6" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Skipped duplicate application: &quot; + str_EmailSubject + &quot; already applied for this job.&quot;]" />
+                                                              <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="Processed_CVs" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="416,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_6" Path="[currentFilePath]" />
+                                                            </Sequence>
+                                                          </If.Then>
+                                                          <If.Else>
+                                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,587.2" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim shortlistThreshold As Integer = 45   ' raw points needed to be shortlisted - change to your own number&#xA;&#xA;If io_totalScore &gt;= shortlistThreshold Then&#xA;    io_status = &quot;Shortlisted&quot;&#xA;Else&#xA;    io_status = &quot;Not Shortlisted&quot;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="416,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
+                                                                <ui:InvokeCode.Arguments>
+                                                                  <InArgument x:TypeArguments="x:Int32" x:Key="io_totalScore">[int_total_score]</InArgument>
+                                                                  <InOutArgument x:TypeArguments="x:String" x:Key="io_status">[str_ApplicationStatus]</InOutArgument>
+                                                                </ui:InvokeCode.Arguments>
+                                                              </ui:InvokeCode>
+                                                              <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Run Command" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="416,147.2" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_9" Sql="INSERT IGNORE INTO applications (applicant_id, job_id, qualification_score, application_date, application_status, cv_file_path) VALUES (?, ?, ?, NOW(), ?, ?)">
+                                                                <ui:ExecuteNonQuery.Parameters>
+                                                                  <InArgument x:TypeArguments="x:Int32" x:Key="ApplicantID">[int_NewApplicantID]</InArgument>
+                                                                  <InArgument x:TypeArguments="x:Int32" x:Key="JobID">[MatchedJobID]</InArgument>
+                                                                  <InArgument x:TypeArguments="x:Int32" x:Key="qualification_score">[int_total_score]</InArgument>
+                                                                  <InArgument x:TypeArguments="x:String" x:Key="application_status">[str_ApplicationStatus]</InArgument>
+                                                                  <InArgument x:TypeArguments="x:String" x:Key="cv_file_path">[currentFilePath]</InArgument>
+                                                                </ui:ExecuteNonQuery.Parameters>
+                                                              </ui:ExecuteNonQuery>
+                                                              <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="Processed_CVs" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="416,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_5" Path="[currentFilePath]" />
+                                                            </Sequence>
+                                                          </If.Else>
+                                                        </If>
+                                                        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DataTable="[dt_ExistingApplication]" DisplayName="Run Query" ExistingDbConnection="[dbConn]" sap:VirtualizedContainerService.HintSize="486.4,138.4" sap2010:WorkflowViewState.IdRef="ExecuteQuery_9" Sql="SELECT COUNT(*) AS app_count FROM applications WHERE applicant_id = ? AND job_id = ?">
+                                                          <ui:ExecuteQuery.Parameters>
+                                                            <InArgument x:TypeArguments="x:Int32" x:Key="applicant_id">[int_NewApplicantID]</InArgument>
+                                                            <InArgument x:TypeArguments="x:Int32" x:Key="job_id">[MatchedJobID]</InArgument>
+                                                          </ui:ExecuteQuery.Parameters>
+                                                        </ui:ExecuteQuery>
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="520,89.6" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="555.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEachRow.Body>
+                                    </ui:ForEachRow>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="718.4,225.6" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="684.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Warn" Message="[&quot;No matching job found for: &quot; + currentFilePath]" />
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="753.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <ui:DatabaseDisconnect DatabaseConnection="[dbConn]" DisplayName="Disconnect from Database" sap:VirtualizedContainerService.HintSize="755.2,56.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="755.2,113.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;CV Extraction and Screening Done&quot;]" />
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Catch" sap:VirtualizedContainerService.HintSize="788.8,225.6" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="755.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Error" Message="[&quot;Failed to process &quot; + currentFilePath + &quot;: &quot; + exception.Message]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                    <TryCatch.Finally>
+                      <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="788.8,89.6" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </TryCatch.Finally>
+                  </TryCatch>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+          </ui:ForEach>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="859.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_45">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
